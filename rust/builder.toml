@@ -1,0 +1,25 @@
+description = "debian slim AMD64+ARM64 base image"
+
+[lifecycle]
+version = "0.20.8"
+# uri  = life
+
+[build]
+#image = "docker.io/kearun/build-bookworm-slim:latest"
+image = "build-bookworm-slim:latest"
+
+[run]
+[[run.images]]
+#image = "docker.io/kearun/run-bookworm-slim:latest"
+image = "run-bookworm-slim:latest"
+
+[[buildpacks]]
+id = "kea-run/buildpack-rust"
+#uri = "docker://docker.io/kearun/buildpack-rust"
+uri = "../../buildpack-rust/packaged/x86_64-unknown-linux-musl/debug/kea-run_buildpack-rust"
+
+[[order]]
+[[order.group]]
+id = "kea-run/buildpack-rust"
+version = "0.1.0"
+optional = false
