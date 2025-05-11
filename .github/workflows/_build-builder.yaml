@@ -21,8 +21,9 @@ jobs:
       contents: read
     strategy:
       matrix:
-        - arch: arm64
-        - arch: amd64
+        build:
+          - arch: arm64
+          - arch: amd64
 
     runs-on: ${{ matrix.arch == 'arm64' && 'ubuntu-24.04-arm' || 'ubuntu-24.04' }}
     env:
