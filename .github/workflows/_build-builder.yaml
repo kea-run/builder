@@ -5,6 +5,9 @@ on:
       dir:
         type: string
         required: true
+      dockerhub_repo:
+        type: string
+        required: true
     secrets:
       dockerhub_username:
         required: true

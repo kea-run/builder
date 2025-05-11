@@ -13,7 +13,7 @@ arch = "amd64"
 
 [[targets]]
 os = "linux"
-arch = "arch64"
+arch = "arm64"
 
 [run]
 [[run.images]]
