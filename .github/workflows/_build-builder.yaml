@@ -40,7 +40,7 @@ jobs:
       - name: Create Docker images
         working-directory: ${{ inputs.dir }}
         run: |
-          cat buildpack.toml
+          cat builder.toml
 
           pack builder create ${{ env.IMAGE_NAME }} \
             --config builder.toml
