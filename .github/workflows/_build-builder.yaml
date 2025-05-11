@@ -40,6 +40,9 @@ jobs:
       - name: Install Pack CLI
         uses: buildpacks/github-actions/setup-pack@c502bcff683efa6f6d56a325df3fbe1722e21881 # v5.8.11
 
+      - name: Docker system info
+        runs: docker system info
+
       - name: Create Docker images
         working-directory: ${{ inputs.dir }}
         run: |
