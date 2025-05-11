@@ -7,13 +7,16 @@ version = "0.20.8"
 [build]
 image = "docker.io/kearun/build-bookworm-slim:latest"
 
-[[targets]]
-os = "linux"
-arch = "amd64"
+# cant list targets until https://github.com/buildpacks/pack/pull/2385 
+# is fixed.
+# [[targets]]
+# os = "linux"
+# arch = "amd64"
+#
+# [[targets]]
+# os = "linux"
+# arch = "arm64"
 
-[[targets]]
-os = "linux"
-arch = "arm64"
 
 [run]
 [[run.images]]

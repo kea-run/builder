@@ -6,8 +6,6 @@
 build-rust:
 	@pack builder create kea-run/builder:rust \
 		--pull-policy always \
-		-t "linux/amd64" \
-		-t "linux/arm64" \
 		--config rust/builder.toml
 
 .PHONY: build
