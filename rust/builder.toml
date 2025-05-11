@@ -5,18 +5,24 @@ version = "0.20.8"
 # uri  = life
 
 [build]
-#image = "docker.io/kearun/build-bookworm-slim:latest"
-image = "build-bookworm-slim:latest"
+image = "docker.io/kearun/build-bookworm-slim:latest"
+
+[[targets]]
+os = "linux"
+arch = "amd64"
+
+[[targets]]
+os = "linux"
+arch = "arch64"
 
 [run]
 [[run.images]]
-#image = "docker.io/kearun/run-bookworm-slim:latest"
-image = "run-bookworm-slim:latest"
+image = "docker.io/kearun/run-bookworm-slim:latest"
+
 
 [[buildpacks]]
 id = "kea-run/buildpack-rust"
-#uri = "docker://docker.io/kearun/buildpack-rust"
-uri = "../../buildpack-rust/packaged/x86_64-unknown-linux-musl/debug/kea-run_buildpack-rust"
+uri = "docker://docker.io/kearun/buildpack-rust"
 
 [[order]]
 [[order.group]]
